@@ -1,5 +1,6 @@
 """Test the Task data type."""
 
+import pytest
 from collections import namedtuple
 
 Task = namedtuple("Task", ["summary", "owner", "done", "id"])
@@ -15,6 +16,7 @@ def test_defaults():
     assert t1 == t2
 
 
+@pytest.mark.run_this_please
 def test_member_access():
     t = Task("buy milk", "brian")
     
